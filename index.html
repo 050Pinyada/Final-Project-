@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4chan Natural Scent - หน้าแรก</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page-container">
+        <!-- Header -->
+        <header>
+            <a href="index.html" class="logo-container">
+                <div class="logo-img">
+                    <!-- Inline Clover SVG Logo -->
+                    <svg viewBox="0 0 100 100" width="100%" height="100%">
+                        <path d="M50,50 C38,20 62,20 50,50 C20,38 20,62 50,50 C62,80 38,80 50,50 C80,62 80,38 50,50 Z"
+                            fill="#2b8a3e" />
+                        <path d="M50,50 Q48,70 38,85" stroke="#2b8a3e" stroke-width="5" stroke-linecap="round"
+                            fill="none" />
+                    </svg>
+                </div>
+            </a>
+            <nav>
+                <a href="index.html" class="active">หน้าแรก</a>
+                <a href="about.html">เรื่องราวของเรา</a>
+                <a href="products.html">ผลิตภัณฑ์</a>
+                <a href="details.html">รายละเอียด</a>
+                <a href="contact.html">ติดต่อ</a>
+                <a href="login.html">เข้าสู่ระบบ</a>
+            </nav>
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="เปิดเมนู">
+                <span class="bar"><span class="dot"></span><span class="line"></span></span>
+                <span class="bar"><span class="dot"></span><span class="line"></span></span>
+                <span class="bar"><span class="dot"></span><span class="line"></span></span>
+            </button>
+        </header>
+
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+        <div class="mobile-nav-panel" id="mobileNavPanel">
+            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="ปิดเมนู">✕</button>
+            <a href="index.html" class="active">หน้าแรก</a>
+            <a href="about.html">เรื่องราวของเรา</a>
+            <a href="products.html">ผลิตภัณฑ์</a>
+            <a href="details.html">รายละเอียด</a>
+            <a href="contact.html">ติดต่อ</a>
+            <a href="login.html">เข้าสู่ระบบ</a>
+        </div>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Section -->
+            <div class="home-hero-section">
+                <div class="home-hero-left">
+                    <!-- Large Round Logo Wrapper -->
+                    <div
+                        style="border: 2px solid #035815; border-radius: 50%; padding: 25px; width: 220px; height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
+                        <div
+                            style="position: absolute; top: 15px; font-size: 11px; font-weight: 700; letter-spacing: 2px;">
+                            • NATURAL SCENT •</div>
+                        <div style="width: 80px; height: 80px;">
+                            <svg viewBox="0 0 100 100" width="100%" height="100%">
+                                <path
+                                    d="M50,50 C38,20 62,20 50,50 C20,38 20,62 50,50 C62,80 38,80 50,50 C80,62 80,38 50,50 Z"
+                                    fill="#2b8a3e" />
+                                <path d="M50,50 Q48,70 38,85" stroke="#2b8a3e" stroke-width="5" stroke-linecap="round"
+                                    fill="none" />
+                            </svg>
+                        </div>
+                        <div
+                            style="font-size: 26px; font-weight: 800; color: #1a1a1a; margin-top: 10px; line-height: 1;">
+                            4chan</div>
+                        <div
+                            style="font-size: 9px; font-weight: 700; color: #666; letter-spacing: 1px; margin-top: 2px;">
+                            NATURAL SCENT</div>
+                        <div
+                            style="position: absolute; bottom: 15px; font-size: 9px; font-weight: 600; color: #2b8a3e;">
+                            FROM NATURE FOR YOU</div>
+                    </div>
+                </div>
+                <div class="home-hero-right">
+                    <h1 class="home-hero-title">เสน่ห์แห่งกลิ่นหอม<br>จากภูมิปัญญาไทย</h1>
+                    <div class="ornament-line">
+                        <span class="ornament-diamond">◆</span>
+                    </div>
+                    <a href="products.html" class="btn-view-products">ดูสินค้า</a>
+                </div>
+            </div>
+
+            <!-- Bestsellers & New Row -->
+            <div class="home-row-1">
+                <div class="bestseller-banner">
+                    <div style="max-width: 60%;">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 5px;">
+                            <div style="width: 25px; height: 25px;">
+                                <svg viewBox="0 0 100 100" width="100%" height="100%">
+                                    <path
+                                        d="M50,50 C38,20 62,20 50,50 C20,38 20,62 50,50 C62,80 38,80 50,50 C80,62 80,38 50,50 Z"
+                                        fill="#2b8a3e" />
+                                    <path d="M50,50 Q48,70 38,85" stroke="#2b8a3e" stroke-width="5"
+                                        stroke-linecap="round" fill="none" />
+                                </svg>
+                            </div>
+                            <span style="font-size: 14px; font-weight: 700; color: #2b8a3e;">4chan</span>
+                        </div>
+                        <h2 style="font-size: 20px; font-weight: 800; margin-bottom: 5px;">น้ำหอมธรรมชาติ 100%</h2>
+                        <h3 style="font-size: 16px; font-weight: 700; color: #b7791f; margin-bottom: 8px;">สินค้าขายดี
+                        </h3>
+                        <p style="font-size: 10px; color: #555; line-height: 1.4; margin-bottom: 8px;">หอมติดทนนาน
+                            อ่อนโยน ปราศจากสารเคมีอันตราย คัดสรรเฉพาะพฤกษาและสมุนไพรชั้นยอดเพื่อคุณ</p>
+                        <span
+                            style="font-size: 8px; color: #2b8a3e; font-weight: 700; display: block;">รับประกันสินค้าแท้
+                            100% | จัดส่งฟรีทั่วประเทศ | คืนเงินเต็มจำนวนใน 7 วัน</span>
+                    </div>
+                    <div style="width: 40%; text-align: right;">
+                        <img src="assets/forest_breeze.png" alt="Best Seller"
+                            style="max-width: 100%; max-height: 160px; object-fit: contain; border-radius: 8px;">
+                    </div>
+                </div>
+
+                <div class="new-product-banner">
+                    <h4
+                        style="font-size: 15px; font-weight: 800; border-bottom: 2px solid #000; padding-bottom: 2px; width: 80%;">
+                        สินค้าใหม่</h4>
+                    <img src="assets/rose_bloom.png" alt="New Product">
+                </div>
+            </div>
+
+            <!-- Carousel / Slider -->
+            <div class="home-carousel-section">
+                <div class="carousel-container">
+                    <button class="carousel-btn" style="transform: rotate(180deg);">&#10148;</button>
+
+                    <div class="carousel-track">
+                        <!-- Product 1 -->
+                        <div class="carousel-card">
+                            <span class="card-badge">สินค้าขายดี</span>
+                            <img src="assets/forest_breeze.png" alt="Forest Breeze">
+                            <h5>1. Forest Breeze</h5>
+                            <p>กลิ่นหอมสดชื่นจากธรรมชาติ ให้ความรู้สึกผ่อนคลาย</p>
+                        </div>
+                        <!-- Product 2 -->
+                        <div class="carousel-card">
+                            <span class="card-badge">สินค้าขายดี</span>
+                            <img src="assets/rose_bloom.png" alt="Rose Bloom">
+                            <h5>2. Rose Bloom</h5>
+                            <p>กลิ่นกุหลาบหอมหวานละมุน อ่อนโยน โรแมนติก</p>
+                        </div>
+                        <!-- Product 3 -->
+                        <div class="carousel-card">
+                            <span class="card-badge">สินค้าขายดี</span>
+                            <img src="assets/forest_breeze.png" alt="Ocean Breeze" style="filter: hue-rotate(180deg);">
+                            <h5>3. Ocean Breeze</h5>
+                            <p>กลิ่นทะเลสดชื่น ผ่อนคลาย ให้ความรู้สึกสบายใจ</p>
+                        </div>
+                        <!-- Product 4 -->
+                        <div class="carousel-card">
+                            <span class="card-badge new">สินค้าใหม่</span>
+                            <img src="assets/rose_bloom.png" alt="Citrus Bloom" style="filter: hue-rotate(45deg);">
+                            <h5>4. Citrus Bloom</h5>
+                            <p>กลิ่นซิตรัสสดใส มีชีวิตชีวา เพิ่มความกระปรี้กระเปร่า</p>
+                        </div>
+                        <!-- Product 5 -->
+                        <div class="carousel-card">
+                            <span class="card-badge new">สินค้าใหม่</span>
+                            <img src="assets/rose_bloom.png" alt="Lavender Dream" style="filter: hue-rotate(270deg);">
+                            <h5>5. Lavender Dream</h5>
+                            <p>กลิ่นลาเวนเดอร์ผ่อนคลาย ช่วยให้หลับสบาย</p>
+                        </div>
+                        <!-- Product 6 -->
+                        <div class="carousel-card">
+                            <span class="card-badge">สินค้าขายดี</span>
+                            <img src="assets/forest_breeze.png" alt="Jasmine Whisper"
+                                style="filter: hue-rotate(90deg);">
+                            <h5>6. Jasmine Whisper</h5>
+                            <p>กลิ่นมะลิหอมอ่อนโยน สะอาดบริสุทธิ์</p>
+                        </div>
+                    </div>
+
+                    <button class="carousel-btn">&#10148;</button>
+                </div>
+
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-info">
+                <div class="footer-col">
+                    <h4>ติดต่อเรา</h4>
+                    <ul>
+                        <li>📍 123 ถนนสุขุมวิท กรุงเทพฯ 10110</li>
+                        <li>📞 02-123-4567</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>ติดตามเรา</h4>
+                    <ul>
+                        <li>📘 Facebook : 4chan Natural Scent</li>
+                        <li>📸 Instagram : @4chan_natural</li>
+                        <li>💬 LINE : @4chan</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-promo-banner">
+                <span>🛡️ สินค้าแท้ 100%</span>
+                <span>🚚 ส่งฟรีเมื่อครบ 999 บาท</span>
+                <span>🔒 ชำระเงินปลอดภัย</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

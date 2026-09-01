@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4chan Natural Scent - รายละเอียดสินค้า</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-container">
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo-container">
+            <div class="logo-img">
+                <svg viewBox="0 0 100 100" width="100%" height="100%">
+                    <path d="M50,50 C38,20 62,20 50,50 C20,38 20,62 50,50 C62,80 38,80 50,50 C80,62 80,38 50,50 Z" fill="#2b8a3e" />
+                    <path d="M50,50 Q48,70 38,85" stroke="#2b8a3e" stroke-width="5" stroke-linecap="round" fill="none" />
+                </svg>
+            </div>
+        </a>
+        <nav>
+            <a href="index.html">หน้าแรก</a>
+            <a href="about.html">เรื่องราวของเรา</a>
+            <a href="products.html">ผลิตภัณฑ์</a>
+            <a href="details.html" class="active">รายละเอียด</a>
+            <a href="contact.html">ติดต่อ</a>
+            <a href="login.html">เข้าสู่ระบบ</a>
+        </nav>
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="เปิดเมนู">
+            <span class="bar"><span class="dot"></span><span class="line"></span></span>
+            <span class="bar"><span class="dot"></span><span class="line"></span></span>
+            <span class="bar"><span class="dot"></span><span class="line"></span></span>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <div class="mobile-nav-panel" id="mobileNavPanel">
+        <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="ปิดเมนู">✕</button>
+        <a href="index.html">หน้าแรก</a>
+        <a href="about.html">เรื่องราวของเรา</a>
+        <a href="products.html">ผลิตภัณฑ์</a>
+        <a href="details.html" class="active">รายละเอียด</a>
+        <a href="contact.html">ติดต่อ</a>
+        <a href="login.html">เข้าสู่ระบบ</a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="details-section">
+            
+            <!-- Top Product Details -->
+            <div class="details-top">
+                <div class="details-img-container">
+                    <img id="detailImg" src="assets/forest_breeze.png" alt="Forest Breeze">
+                </div>
+                <div class="details-info">
+                    <span id="detailBadge" class="details-tag-bestseller">🔥 สินค้าขายดี</span>
+                    <h1 id="detailTitle" class="details-title">Forest Breeze</h1>
+                    <p id="detailSubtitle" class="details-subtitle">กลิ่นหอมสดชื่นจากธรรมชาติ ให้ความรู้สึกผ่อนคลายและมั่นใจตลอดวัน</p>
+                    <div id="detailPrice" class="details-price">1,500 บาท</div>
+                    <div class="details-rating">
+                        <span id="detailRatingStars" class="stars">★★★★★</span>
+                        <span id="detailReviewCount">(320 รีวิว)</span>
+                    </div>
+
+                    <!-- Specs Table -->
+                    <table class="details-table">
+                        <tr>
+                            <td>ขนาด</td>
+                            <td id="detailSize">50 ml.</td>
+                        </tr>
+                        <tr>
+                            <td>ประเภทกลิ่น</td>
+                            <td id="detailType">สดชื่น (Fresh)</td>
+                        </tr>
+                        <tr>
+                            <td>ความติดทน</td>
+                            <td id="detailLongevity">8-12 ชั่วโมง</td>
+                        </tr>
+                        <tr>
+                            <td>เหมาะสำหรับ</td>
+                            <td id="detailGender">ใช้ได้ทุกเพศ (Unisex)</td>
+                        </tr>
+                        <tr>
+                            <td>บรรจุภัณฑ์</td>
+                            <td id="detailPackage">กล่องพรีเมียมแบรนด์ 4chan</td>
+                        </tr>
+                    </table>
+
+                    <!-- Quantity Selector -->
+                    <div class="quantity-selector">
+                        <span>จำนวน</span>
+                        <div class="qty-controls">
+                            <button class="qty-btn qty-minus" id="detailQtyMinus">-</button>
+                            <span class="qty-val" id="detailQtyVal">1</span>
+                            <button class="qty-btn qty-plus" id="detailQtyPlus">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="details-action-buttons">
+                        <button class="btn-details" id="detailBtnCart">🛒 เพิ่มลงตระกร้า</button>
+                        <button class="btn-details" id="detailBtnFav">♥ รายการโปรด</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Scent Pyramid Description Section -->
+            <div class="details-bottom-grid">
+                <div>
+                    <span class="badge-pill" style="margin-bottom: 15px;">รายละเอียดกลิ่น</span>
+                    <div class="desc-card">
+                        <h4 id="detailDescHeading" style="font-size: 15px; margin-bottom: 8px;">น้ำหอม 4chan Natural Scent</h4>
+                        <p style="margin-bottom: 10px;">ได้รับการออกแบบตามโครงสร้าง Scent Pyramid</p>
+                        <p id="detailNotesText" style="font-weight: 500; font-size: 12px; line-height: 1.5;">กลิ่นแรก: มะนาว, เบอร์กามอต | กลิ่นหลัก: ไม้สน, มะลิ | กลิ่นฐาน: โอ๊คมอส, ไม้ซีดาร์ ทำให้กลิ่นมีมิติติดทนนานและมอบความรู้สึกเป็นธรรมชาติตลอดวัน 🌿</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/scent_pyramid.png" class="pyramid-img" alt="Scent Pyramid">
+                </div>
+
+                <!-- Marketing notes / icons -->
+                <div class="marketing-features">
+                    <span class="feature-item">🌿 สกัดจากธรรมชาติ 100%</span>
+                    <span class="feature-item">💚 อ่อนโยนต่อผิว</span>
+                    <span class="feature-item">⏰ หอมติดทนนาน 8-12 ชั่วโมง</span>
+                    <span class="feature-item">🚫 ปราศจากสารเคมีอันตราย</span>
+                    <span class="feature-item">🌎 เป็นมิตรต่อสิ่งแวดล้อม</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-info">
+            <div class="footer-col">
+                <h4>ติดต่อเรา</h4>
+                <ul>
+                    <li>📍 123 ถนนสุขุมวิท กรุงเทพฯ 10110</li>
+                    <li>📞 02-123-4567</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>ติดตามเรา</h4>
+                <ul>
+                    <li>📘 Facebook : 4chan Natural Scent</li>
+                    <li>📸 Instagram : @4chan_natural</li>
+                    <li>💬 LINE : @4chan</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-promo-banner">
+            <span>🛡️ สินค้าแท้ 100%</span>
+            <span>🚚 ส่งฟรีเมื่อครบ 999 บาท</span>
+            <span>🔒 ชำระเงินปลอดภัย</span>
+        </div>
+    </footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

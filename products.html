@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4chan Natural Scent - ผลิตภัณฑ์</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page-container">
+        <!-- Header -->
+        <header>
+            <a href="index.html" class="logo-container">
+                <div class="logo-img">
+                    <svg viewBox="0 0 100 100" width="100%" height="100%">
+                        <path d="M50,50 C38,20 62,20 50,50 C20,38 20,62 50,50 C62,80 38,80 50,50 C80,62 80,38 50,50 Z"
+                            fill="#2b8a3e" />
+                        <path d="M50,50 Q48,70 38,85" stroke="#2b8a3e" stroke-width="5" stroke-linecap="round"
+                            fill="none" />
+                    </svg>
+                </div>
+            </a>
+            <nav>
+                <a href="index.html">หน้าแรก</a>
+                <a href="about.html">เรื่องราวของเรา</a>
+                <a href="products.html" class="active">ผลิตภัณฑ์</a>
+                <a href="details.html">รายละเอียด</a>
+                <a href="contact.html">ติดต่อ</a>
+                <a href="login.html">เข้าสู่ระบบ</a>
+            </nav>
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="เปิดเมนู">
+                <span class="bar"><span class="dot"></span><span class="line"></span></span>
+                <span class="bar"><span class="dot"></span><span class="line"></span></span>
+                <span class="bar"><span class="dot"></span><span class="line"></span></span>
+            </button>
+        </header>
+
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+        <div class="mobile-nav-panel" id="mobileNavPanel">
+            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="ปิดเมนู">✕</button>
+            <a href="index.html">หน้าแรก</a>
+            <a href="about.html">เรื่องราวของเรา</a>
+            <a href="products.html" class="active">ผลิตภัณฑ์</a>
+            <a href="details.html">รายละเอียด</a>
+            <a href="contact.html">ติดต่อ</a>
+            <a href="login.html">เข้าสู่ระบบ</a>
+        </div>
+
+        <!-- Main Content -->
+        <main>
+            <div class="products-layout">
+                <!-- Sidebar Filter -->
+                <aside class="sidebar-filter">
+                    <!-- หมวดหมู่ / สถานะ -->
+                    <div class="filter-group">
+                        <h4>สถานะสินค้า</h4>
+                        <label class="filter-option"><input type="checkbox" name="status" value="bestseller"> 🔥 สินค้าขายดี</label>
+                        <label class="filter-option"><input type="checkbox" name="status" value="new"> ✨ สินค้าใหม่</label>
+                    </div>
+
+                    <!-- ช่วงราคา -->
+                    <div class="filter-group">
+                        <h4>ช่วงราคา</h4>
+                        <label class="filter-option"><input type="checkbox" name="price" value="0-1000"> ไม่เกิน 1,000 บาท</label>
+                        <label class="filter-option"><input type="checkbox" name="price" value="1000-2000"> 1,000 - 2,000 บาท</label>
+                        <label class="filter-option"><input type="checkbox" name="price" value="2000-3000"> 2,000 - 3,000 บาท</label>
+                    </div>
+
+                    <!-- กลุ่มกลิ่น -->
+                    <div class="filter-group">
+                        <h4>กลุ่มกลิ่น</h4>
+                        <label class="filter-option"><input type="checkbox" name="scent" value="floral"> ดอกไม้</label>
+                        <label class="filter-option"><input type="checkbox" name="scent" value="fresh"> สดชื่น</label>
+                        <label class="filter-option"><input type="checkbox" name="scent" value="woody"> ไม้หอม</label>
+                        <label class="filter-option"><input type="checkbox" name="scent" value="fruity"> ผลไม้</label>
+                        <label class="filter-option"><input type="checkbox" name="scent" value="oriental"> ออเรียนทัล</label>
+                    </div>
+
+                    <!-- สำหรับ -->
+                    <div class="filter-group">
+                        <h4>สำหรับ</h4>
+                        <label class="filter-option"><input type="checkbox" name="gender" value="female"> ผู้หญิง</label>
+                        <label class="filter-option"><input type="checkbox" name="gender" value="male"> ผู้ชาย</label>
+                        <label class="filter-option"><input type="checkbox" name="gender" value="unisex"> ใช้ได้ทุกเพศ</label>
+                    </div>
+
+                    <!-- Sidebar Buttons -->
+                    <div class="sidebar-buttons">
+                        <button class="btn-sidebar" id="btnFilterSubmit">ค้นหา</button>
+                        <button class="btn-sidebar" id="btnFilterReset" style="background-color: #777;">ล้างการค้นหา</button>
+                    </div>
+                </aside>
+
+                <!-- Product Grid Area -->
+                <div>
+                    <div class="products-main-grid" id="productsMainGrid">
+                        <!-- Product 1 -->
+                        <div class="product-card bestseller-card" data-product-id="1" data-gender="unisex" data-price="1500" data-status="bestseller" data-scent="fresh">
+                            <span class="card-badge bestseller-badge">🔥 สินค้าขายดี</span>
+                            <img src="assets/forest_breeze.png" alt="Forest Breeze">
+                            <h4>1. Forest Breeze</h4>
+                            <p>กลิ่นหอมสดชื่นจากธรรมชาติ ให้ความรู้สึกผ่อนคลาย</p>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="product-card bestseller-card" data-product-id="2" data-gender="female" data-price="1890" data-status="bestseller" data-scent="floral">
+                            <span class="card-badge bestseller-badge">🔥 สินค้าขายดี</span>
+                            <img src="assets/rose_bloom.png" alt="Rose Bloom">
+                            <h4>2. Rose Bloom</h4>
+                            <p>กลิ่นกุหลาบหอมหวานละมุน อ่อนโยน โรแมนติก</p>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="product-card bestseller-card" data-product-id="3" data-gender="unisex" data-price="1750" data-status="bestseller" data-scent="fresh">
+                            <span class="card-badge bestseller-badge">🔥 สินค้าขายดี</span>
+                            <img src="assets/forest_breeze.png" alt="Ocean Breeze" style="filter: hue-rotate(180deg);">
+                            <h4>3. Ocean Breeze</h4>
+                            <p>กลิ่นทะเลสดชื่น ผ่อนคลาย ให้ความรู้สึกสบายใจ</p>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="product-card" data-product-id="4" data-gender="unisex" data-price="1650" data-status="new" data-scent="fresh">
+                            <span class="card-badge new-badge">✨ สินค้าใหม่</span>
+                            <img src="assets/rose_bloom.png" alt="Citrus Bloom" style="filter: hue-rotate(45deg);">
+                            <h4>4. Citrus Bloom</h4>
+                            <p>กลิ่นซิตรัสสดใส มีชีวิตชีวา เพิ่มความกระปรี้กระเปร่า</p>
+                        </div>
+
+                        <!-- Product 5 -->
+                        <div class="product-card" data-product-id="5" data-gender="unisex" data-price="1650" data-status="new" data-scent="floral">
+                            <span class="card-badge new-badge">✨ สินค้าใหม่</span>
+                            <img src="assets/rose_bloom.png" alt="Lavender Dream" style="filter: hue-rotate(270deg);">
+                            <h4>5. Lavender Dream</h4>
+                            <p>กลิ่นลาเวนเดอร์ผ่อนคลาย ช่วยให้หลับสบาย</p>
+                        </div>
+
+                        <!-- Product 6 -->
+                        <div class="product-card bestseller-card" data-product-id="6" data-gender="female" data-price="1800" data-status="bestseller" data-scent="floral">
+                            <span class="card-badge bestseller-badge">🔥 สินค้าขายดี</span>
+                            <img src="assets/forest_breeze.png" alt="Jasmine Whisper" style="filter: hue-rotate(90deg);">
+                            <h4>6. Jasmine Whisper</h4>
+                            <p>กลิ่นมะลิหอมอ่อนโยน สะอาดบริสุทธิ์</p>
+                        </div>
+
+                        <!-- Product 7 -->
+                        <div class="product-card" data-product-id="7" data-gender="male" data-price="2100" data-status="new" data-scent="woody">
+                            <span class="card-badge new-badge">✨ สินค้าใหม่</span>
+                            <img src="assets/forest_breeze.png" alt="Sandalwood" style="filter: sepia(0.6) hue-rotate(330deg);">
+                            <h4>7. Sandalwood</h4>
+                            <p>กลิ่นไม้หอมอบอุ่น นุ่มลึก ให้ความรู้สึกมั่นคง</p>
+                        </div>
+
+                        <!-- Product 8 -->
+                        <div class="product-card" data-product-id="8" data-gender="unisex" data-price="1550" data-status="new" data-scent="fresh">
+                            <span class="card-badge new-badge">✨ สินค้าใหม่</span>
+                            <img src="assets/forest_breeze.png" alt="Green Tea" style="filter: hue-rotate(60deg) saturate(1.5);">
+                            <h4>8. Green Tea</h4>
+                            <p>กลิ่นใบชาเขียวสดชื่น สบายใจ ผ่อนคลายความเครียด</p>
+                        </div>
+
+                        <!-- Product 9 -->
+                        <div class="product-card bestseller-card" data-product-id="9" data-gender="female" data-price="1700" data-status="bestseller" data-scent="floral">
+                            <span class="card-badge bestseller-badge">🔥 สินค้าขายดี</span>
+                            <img src="assets/rose_bloom.png" alt="Vanilla Bliss" style="filter: sepia(0.5) hue-rotate(10deg);">
+                            <h4>9. Vanilla Bliss</h4>
+                            <p>กลิ่นวนิลาหอมหวานละมุน ออบอุ่น น่าหลงใหล</p>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="products-pagination">
+                        <span class="page-arrow">&lt;</span>
+                        <span class="page-num active">1</span>
+                        <span class="page-num" style="background-color: #e5e5e5; color: black;">2</span>
+                        <span class="page-num" style="background-color: #e5e5e5; color: black;">3</span>
+                        <span class="page-num" style="background-color: #e5e5e5; color: black;">&gt;</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-info">
+                <div class="footer-col">
+                    <h4>ติดต่อเรา</h4>
+                    <ul>
+                        <li>📍 123 ถนนสุขุมวิท กรุงเทพฯ 10110</li>
+                        <li>📞 02-123-4567</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>ติดตามเรา</h4>
+                    <ul>
+                        <li>📘 Facebook : 4chan Natural Scent</li>
+                        <li>📸 Instagram : @4chan_natural</li>
+                        <li>💬 LINE : @4chan</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-promo-banner">
+                <span>🛡️ สินค้าแท้ 100%</span>
+                <span>🚚 ส่งฟรีเมื่อครบ 999 บาท</span>
+                <span>🔒 ชำระเงินปลอดภัย</span>
+            </div>
+        </footer>
+    <!-- Product Detail Modal Overlay & Box -->
+    <div class="product-modal-overlay" id="productModalOverlay" aria-hidden="true">
+        <div class="product-modal" role="dialog" aria-labelledby="modalTitle">
+            <button class="product-modal-close" id="modalCloseBtn" aria-label="ปิดหน้าต่าง">✕</button>
+            <div class="product-modal-content">
+                <div class="product-modal-image-wrapper">
+                    <img src="" id="modalImg" alt="รูปสินค้า" class="product-modal-img">
+                    <span class="modal-badge-popular" id="modalBadge">🔥 สินค้าขายดี</span>
+                </div>
+                <div class="product-modal-details">
+                    <span class="modal-gender-tag" id="modalGender">🌸 สำหรับผู้หญิง</span>
+                    <h3 id="modalTitle" class="modal-title">ชื่อสินค้า</h3>
+                    <p id="modalPrice" class="modal-price">1,890 บาท</p>
+                    <p id="modalDesc" class="modal-desc">คำบรรยายสั้นๆ...</p>
+                    
+                    <div class="modal-info-group">
+                        <h4 class="modal-subtitle">🌿 ลักษณะกลิ่น (Scent Notes)</h4>
+                        <p id="modalNotes" class="modal-notes-text">Top: Bergamot | Middle: Jasmine | Base: Cedarwood</p>
+                    </div>
+
+                    <div class="modal-info-group">
+                        <div class="modal-satisfaction-header">
+                            <span class="modal-subtitle">⭐ ความพึงพอใจจากผู้ใช้</span>
+                            <span id="modalSatisfactionText" class="modal-satisfaction-rate">98%</span>
+                        </div>
+                        <div class="modal-progress-bar-bg">
+                            <div id="modalProgressBar" class="modal-progress-bar-fill" style="width: 98%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button class="btn-modal-cart" id="modalCartBtn">🛒 เพิ่มลงตระกร้า</button>
+                        <a href="details.html" class="btn-modal-details">ดูรายละเอียดเต็ม</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

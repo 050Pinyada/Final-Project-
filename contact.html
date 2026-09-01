@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4chan Natural Scent - ติดต่อ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-container" style="border: 2px solid #536dfe;">
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo-container">
+            <div class="logo-img">
+                <svg viewBox="0 0 100 100" width="100%" height="100%">
+                    <path d="M50,50 C38,20 62,20 50,50 C20,38 20,62 50,50 C62,80 38,80 50,50 C80,62 80,38 50,50 Z" fill="#2b8a3e" />
+                    <path d="M50,50 Q48,70 38,85" stroke="#2b8a3e" stroke-width="5" stroke-linecap="round" fill="none" />
+                </svg>
+            </div>
+        </a>
+        <nav>
+            <a href="index.html">หน้าแรก</a>
+            <a href="about.html">เรื่องราวของเรา</a>
+            <a href="products.html">ผลิตภัณฑ์</a>
+            <a href="details.html">รายละเอียด</a>
+            <a href="contact.html" class="active">ติดต่อ</a>
+            <a href="login.html">เข้าสู่ระบบ</a>
+        </nav>
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="เปิดเมนู">
+            <span class="bar"><span class="dot"></span><span class="line"></span></span>
+            <span class="bar"><span class="dot"></span><span class="line"></span></span>
+            <span class="bar"><span class="dot"></span><span class="line"></span></span>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <div class="mobile-nav-panel" id="mobileNavPanel">
+        <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="ปิดเมนู">✕</button>
+        <a href="index.html">หน้าแรก</a>
+        <a href="about.html">เรื่องราวของเรา</a>
+        <a href="products.html">ผลิตภัณฑ์</a>
+        <a href="details.html">รายละเอียด</a>
+        <a href="contact.html" class="active">ติดต่อ</a>
+        <a href="login.html">เข้าสู่ระบบ</a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Title Header with mail icon and dashed decoration line -->
+        <div style="text-align: center; margin-bottom: 25px;">
+            <h1 style="font-size: 24px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                ✉️ ส่งข้อความถึงเรา
+            </h1>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 5px; margin-top: 10px;">
+                <span style="font-size: 16px;">🌿</span>
+                <span style="border-top: 2px dashed #000; width: 220px; display: inline-block;"></span>
+                <span style="font-size: 16px; transform: scaleX(-1);">🌿</span>
+            </div>
+        </div>
+
+        <!-- Form Container -->
+        <div class="contact-container">
+            <!-- Left: Message Form -->
+            <form class="contact-form">
+                <!-- Name -->
+                <div class="form-group">
+                    <label class="form-label">*ชื่อ-นามสกุล</label>
+                    <input type="text" class="form-input" required>
+                </div>
+                <!-- Email -->
+                <div class="form-group">
+                    <label class="form-label">*อีเมล</label>
+                    <input type="email" class="form-input" required>
+                </div>
+                <!-- Phone -->
+                <div class="form-group">
+                    <label class="form-label">*เบอร์โทรศัพท์</label>
+                    <input type="tel" class="form-input" required>
+                </div>
+                <!-- Subject -->
+                <div class="form-group">
+                    <label class="form-label">*เรื่องที่ต้องการติดต่อ</label>
+                    <div class="form-checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="subject" value="สอบถามข้อมูลสินค้า">
+                            <span>สอบถามข้อมูลสินค้า</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="subject" value="แจ้งปัญหาการใช้งาน">
+                            <span>แจ้งปัญหาการใช้งาน</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="subject" value="ติดตามสถานะคำสั่งซื้อ">
+                            <span>ติดตามสถานะคำสั่งซื้อ</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="subject" value="ขอคำแนะนำเกี่ยวกับกลิ่นน้ำหอม">
+                            <span>ขอคำแนะนำเกี่ยวกับกลิ่นน้ำหอม</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="subject" value="ติดต่อเพื่อเป็นตัวแทนจำหน่าย">
+                            <span>ติดต่อเพื่อเป็นตัวแทนจำหน่าย</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn-submit">ส่งข้อความ</button>
+            </form>
+
+            <!-- Right: Beautiful Product images to match mockup -->
+            <div class="contact-images">
+                <img src="assets/forest_breeze.png" alt="Natural Perfume 1">
+                <img src="assets/rose_bloom.png" alt="Natural Perfume 2">
+            </div>
+        </div>
+
+        <!-- Bottom Quote Box -->
+        <div class="contact-banner-quote">
+            <span>🌿</span>
+            <span style="font-weight: 700;">"เพราะความพึงพอใจของลูกค้าคือสิ่งสำคัญที่สุด หากต้องการคำแนะนำเกี่ยวกับน้ำหอมธรรมชาติ ทีมงาน 4chan Natural Scent ยินดีให้บริการเสมอ" 💚🌿</span>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-info">
+            <div class="footer-col">
+                <h4>ติดต่อเรา</h4>
+                <ul>
+                    <li>📍 123 ถนนสุขุมวิท กรุงเทพฯ 10110</li>
+                    <li>📞 02-123-4567</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>ติดตามเรา</h4>
+                <ul>
+                    <li>📘 Facebook : 4chan Natural Scent</li>
+                    <li>📸 Instagram : @4chan_natural</li>
+                    <li>💬 LINE : @4chan</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-promo-banner">
+            <span>🛡️ สินค้าแท้ 100%</span>
+            <span>🚚 ส่งฟรีเมื่อครบ 999 บาท</span>
+            <span>🔒 ชำระเงินปลอดภัย</span>
+        </div>
+    </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4chan Natural Scent - เรื่องราวของเรา</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page-container">
+        <!-- Header -->
+        <header>
+            <a href="index.html" class="logo-container">
+                <div class="logo-img">
+                    <svg viewBox="0 0 100 100" width="100%" height="100%">
+                        <path d="M50,50 C38,20 62,20 50,50 C20,38 20,62 50,50 C62,80 38,80 50,50 C80,62 80,38 50,50 Z"
+                            fill="#2b8a3e" />
+                        <path d="M50,50 Q48,70 38,85" stroke="#2b8a3e" stroke-width="5" stroke-linecap="round"
+                            fill="none" />
+                    </svg>
+                </div>
+            </a>
+            <nav>
+                <a href="index.html">หน้าแรก</a>
+                <a href="about.html" class="active">เรื่องราวของเรา</a>
+                <a href="products.html">ผลิตภัณฑ์</a>
+                <a href="details.html">รายละเอียด</a>
+                <a href="contact.html">ติดต่อ</a>
+                <a href="login.html">เข้าสู่ระบบ</a>
+            </nav>
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="เปิดเมนู">
+                <span class="bar"><span class="dot"></span><span class="line"></span></span>
+                <span class="bar"><span class="dot"></span><span class="line"></span></span>
+                <span class="bar"><span class="dot"></span><span class="line"></span></span>
+            </button>
+        </header>
+
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+        <div class="mobile-nav-panel" id="mobileNavPanel">
+            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="ปิดเมนู">✕</button>
+            <a href="index.html">หน้าแรก</a>
+            <a href="about.html" class="active">เรื่องราวของเรา</a>
+            <a href="products.html">ผลิตภัณฑ์</a>
+            <a href="details.html">รายละเอียด</a>
+            <a href="contact.html">ติดต่อ</a>
+            <a href="login.html">เข้าสู่ระบบ</a>
+        </div>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Top Scent Category Banner -->
+            <div
+                style="background-color: #2b8a3e; color: white; border-radius: 12px; overflow: hidden; margin-bottom: 30px; border: 1px solid var(--border-color); display: flex; flex-direction: column;">
+                <!-- Brand header in banner -->
+                <div
+                    style="display: flex; align-items: center; justify-content: space-between; padding: 15px 25px; border-bottom: 1px solid rgba(255,255,255,0.15);">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <div style="width: 25px; height: 25px;">
+                            <svg viewBox="0 0 100 100" width="100%" height="100%">
+                                <path
+                                    d="M50,50 C38,20 62,20 50,50 C20,38 20,62 50,50 C62,80 38,80 50,50 C80,62 80,38 50,50 Z"
+                                    fill="#ffffff" />
+                                <path d="M50,50 Q48,70 38,85" stroke="#ffffff" stroke-width="5" stroke-linecap="round"
+                                    fill="none" />
+                            </svg>
+                        </div>
+                        <span style="font-weight: 700; font-size: 14px; letter-spacing: 1px;">4chan NATURAL SCENT</span>
+                    </div>
+                </div>
+
+                <!-- Category Splits -->
+                <div class="about-category-grid">
+                    <!-- Main Promo Left -->
+                    <div
+                        style="background-color: #3b9a4e; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
+                        <h2 style="font-size: 24px; font-weight: 800; margin-bottom: 5px;">น้ำหอม<br>ธรรมชาติ 100%</h2>
+                        <p style="font-size: 10px; opacity: 0.9; margin-bottom: 10px;">หอมสดชื่น อ่อนโยน มั่นใจ...
+                            จากธรรมชาติ</p>
+                        <div style="display: flex; gap: 6px; font-size: 8px; font-weight: 600;">
+                            <span>🌿 สกัดจากธรรมชาติ 100%</span>
+                            <span>⭐ ปลอดภัยต่อผิว</span>
+                        </div>
+                    </div>
+                    <!-- Warm Woods -->
+                    <div class="scent-banner-card" data-scent-key="warmwoods"
+                        style="background-color: #8c4b27; padding: 15px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; cursor: pointer;">
+                        <img src="assets/forest_breeze.png"
+                            style="width: 50px; height: 50px; object-fit: contain; margin-bottom: 10px;"
+                            alt="Warm Woods">
+                        <span style="font-weight: 700; font-size: 12px;">Warm Woods</span>
+                        <span style="font-size: 9px; opacity: 0.8; margin-top: 2px;">อบอุ่น ละมุนลึก 🔍</span>
+                    </div>
+                    <!-- Citrus Bloom -->
+                    <div class="scent-banner-card" data-scent-key="citrusbloom"
+                        style="background-color: #e28743; padding: 15px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; cursor: pointer;">
+                        <img src="assets/rose_bloom.png"
+                            style="width: 50px; height: 50px; object-fit: contain; margin-bottom: 10px; filter: hue-rotate(45deg);"
+                            alt="Citrus Bloom">
+                        <span style="font-weight: 700; font-size: 12px;">Citrus Bloom</span>
+                        <span style="font-size: 9px; opacity: 0.8; margin-top: 2px;">สดชื่น มีชีวิตชีวา 🔍</span>
+                    </div>
+                    <!-- Lavender -->
+                    <div class="scent-banner-card" data-scent-key="lavender"
+                        style="background-color: #76b5c5; padding: 15px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; cursor: pointer;">
+                        <img src="assets/rose_bloom.png"
+                            style="width: 50px; height: 50px; object-fit: contain; margin-bottom: 10px; filter: hue-rotate(270deg);"
+                            alt="Lavender">
+                        <span style="font-weight: 700; font-size: 12px;">Lavender</span>
+                        <span style="font-size: 9px; opacity: 0.8; margin-top: 2px;">ผ่อนคลาย สบายใจ 🔍</span>
+                    </div>
+                    <!-- Floral -->
+                    <div class="scent-banner-card" data-scent-key="floral"
+                        style="background-color: #eab676; padding: 15px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; cursor: pointer;">
+                        <img src="assets/rose_bloom.png"
+                            style="width: 50px; height: 50px; object-fit: contain; margin-bottom: 10px;" alt="Floral">
+                        <span style="font-weight: 700; font-size: 12px;">Floral</span>
+                        <span style="font-size: 9px; opacity: 0.8; margin-top: 2px;">หอมหวาน อ่อนโยน 🔍</span>
+                    </div>
+                </div>
+
+                <!-- Banner bottom features -->
+                <div class="about-banner-bottom">
+                    <div class="about-banner-bottom-links">
+                        <span>✓ รับประกันสินค้าแท้ 100%</span>
+                        <span>✓ จัดส่งฟรีทั่วประเทศ</span>
+                        <span>✓ ชำระเงินปลายทางได้</span>
+                    </div>
+                    <a href="products.html"
+                        style="background-color: #ffd166; color: #1a1a1a; padding: 4px 15px; border-radius: 15px; text-decoration: none; font-weight: 700; font-size: 10px;">SHOP
+                        NOW</a>
+                </div>
+            </div>
+
+            <!-- Section: About Us Details -->
+            <div class="about-section">
+                <h2 style="font-size: 26px; font-weight: 800; text-align: center; margin-bottom: 20px;">เรื่องราวของเรา</h2>
+
+                <div class="about-intro-grid">
+                    <!-- Group of bottles or nice display image -->
+                    <div>
+                        <img src="assets/forest_breeze.png" class="about-intro-img"
+                            style="max-height: 250px; object-fit: contain; background: #eee; padding: 5px;"
+                            alt="Bottles Display">
+                    </div>
+                    <!-- Peach brand intro box -->
+                    <div class="about-intro-box">
+                        <h3>4chan Natural Scent</h3>
+                        <p>ก่อตั้งขึ้นด้วยความตั้งใจที่จะสร้างน้ำหอมจากธรรมชาติที่มอบความหอมอันเป็นเอกลักษณ์พร้อมคำนึงถึงความปลอดภัยของผู้ใช้และสิ่งแวดล้อม
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: Scent Identities -->
+            <div class="scent-identities">
+                <h2 style="font-size: 24px; font-weight: 800; text-align: center; margin-bottom: 5px;">
+                    เอกลักษณ์ของกลิ่น</h2>
+                <p style="text-align: center; font-size: 13px; color: var(--text-muted); margin-bottom: 20px;">💡 คลิกที่การ์ดเอกลักษณ์กลิ่นด้านล่างเพื่ออ่านรายละเอียดและเรื่องราวของกลิ่นนั้นๆ</p>
+
+                <div class="scent-grid">
+                    <!-- Oakmoss -->
+                    <div class="scent-card" data-scent-key="oakmoss">
+                        <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=150&auto=format&fit=crop&q=60"
+                            alt="Oakmoss">
+                        <span>Oakmoss</span>
+                        <span class="scent-read-hint">🔍 คลิกเพื่ออ่าน</span>
+                    </div>
+                    <!-- Amber -->
+                    <div class="scent-card" data-scent-key="amber">
+                        <img src="assets/amber.png" alt="Amber">
+                        <span>Amber</span>
+                        <span class="scent-read-hint">🔍 คลิกเพื่ออ่าน</span>
+                    </div>
+                    <!-- Sweet -->
+                    <div class="scent-card" data-scent-key="sweet">
+                        <img src="assets/sweet.png" alt="Sweet">
+                        <span>Sweet</span>
+                        <span class="scent-read-hint">🔍 คลิกเพื่ออ่าน</span>
+                    </div>
+                    <!-- Balsamic -->
+                    <div class="scent-card" data-scent-key="balsamic">
+                        <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=150&auto=format&fit=crop&q=60"
+                            alt="Balsamic">
+                        <span>Balsamic</span>
+                        <span class="scent-read-hint">🔍 คลิกเพื่ออ่าน</span>
+                    </div>
+                    <!-- Iris -->
+                    <div class="scent-card" data-scent-key="iris">
+                        <img src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?w=150&auto=format&fit=crop&q=60"
+                            alt="Iris">
+                        <span>Iris</span>
+                        <span class="scent-read-hint">🔍 คลิกเพื่ออ่าน</span>
+                    </div>
+                    <!-- Animalic -->
+                    <div class="scent-card" data-scent-key="animalic">
+                        <img src="https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?w=150&auto=format&fit=crop&q=60"
+                            alt="Animalic">
+                        <span>Animalic</span>
+                        <span class="scent-read-hint">🔍 คลิกเพื่ออ่าน</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-info">
+                <div class="footer-col">
+                    <h4>ติดต่อเรา</h4>
+                    <ul>
+                        <li>📍 123 ถนนสุขุมวิท กรุงเทพฯ 10110</li>
+                        <li>📞 02-123-4567</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>ติดตามเรา</h4>
+                    <ul>
+                        <li>📘 Facebook : 4chan Natural Scent</li>
+                        <li>📸 Instagram : @4chan_natural</li>
+                        <li>💬 LINE : @4chan</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-promo-banner">
+                <span>🛡️ สินค้าแท้ 100%</span>
+                <span>🚚 ส่งฟรีเมื่อครบ 999 บาท</span>
+                <span>🔒 ชำระเงินปลอดภัย</span>
+            </div>
+        </footer>
+    <!-- Scent Detail Reader Modal Box -->
+    <div class="product-modal-overlay" id="scentReaderOverlay" aria-hidden="true">
+        <div class="product-modal" style="max-width: 580px; border-radius: 24px;">
+            <button class="product-modal-close" id="scentReaderCloseBtn" aria-label="ปิดหน้าต่าง">✕</button>
+            <div class="product-modal-content" style="grid-template-columns: 180px 1fr; gap: 20px; padding: 25px;">
+                <div class="product-modal-image-wrapper" style="background: #fdf4ff;">
+                    <img src="" id="scentReaderImg" alt="เอกลักษณ์ของกลิ่น" class="product-modal-img" style="border-radius: 12px; max-height: 160px; object-fit: cover;">
+                </div>
+                <div class="product-modal-details">
+                    <span class="modal-gender-tag" id="scentReaderTag" style="background: #f3e8ff; color: #9333ea; font-size: 11px;">🌿 เอกลักษณ์ของกลิ่น</span>
+                    <h3 id="scentReaderTitle" class="modal-title" style="font-size: 20px; margin-top: 4px; margin-bottom: 8px;">ชื่อกลิ่น</h3>
+                    <p id="scentReaderDesc" class="modal-desc" style="font-size: 13px; line-height: 1.5; color: #4a3560; margin-bottom: 12px;">คำบรรยายกลิ่น...</p>
+                    
+                    <div class="modal-info-group" style="margin-bottom: 10px;">
+                        <p id="scentReaderTone" style="font-size: 12px; font-weight: 600; color: #7e22ce; background: #faf5ff; padding: 6px 10px; border-radius: 8px; margin-bottom: 6px;">✨ โทนกลิ่น: </p>
+                        <p id="scentReaderFeeling" style="font-size: 12px; font-weight: 600; color: #2b8a3e; background: #f0fdf4; padding: 6px 10px; border-radius: 8px;">🌿 ให้ความรู้สึก: </p>
+                    </div>
+
+                    <div style="font-size: 11px; font-weight: 700; color: #6b21a8; background: #f3e8ff; padding: 8px 12px; border-radius: 10px; text-align: center; margin-top: 5px;">
+                        🛍️ พบในน้ำหอม: <span id="scentReaderPerfumes" style="font-weight: 600; color: #1a1a1a;">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
