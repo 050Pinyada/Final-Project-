@@ -29,7 +29,6 @@
                 <a href="products.html">ผลิตภัณฑ์</a>
                 <a href="details.html">รายละเอียด</a>
                 <a href="contact.html">ติดต่อ</a>
-                <a href="login.html">เข้าสู่ระบบ</a>
             </nav>
             <!-- Hamburger Menu Button -->
             <button class="hamburger-btn" id="hamburgerBtn" aria-label="เปิดเมนู">
@@ -48,7 +47,6 @@
             <a href="products.html">ผลิตภัณฑ์</a>
             <a href="details.html">รายละเอียด</a>
             <a href="contact.html">ติดต่อ</a>
-            <a href="login.html">เข้าสู่ระบบ</a>
         </div>
 
         <!-- Main Content -->
@@ -138,7 +136,8 @@
 
             <!-- Section: About Us Details -->
             <div class="about-section">
-                <h2 style="font-size: 26px; font-weight: 800; text-align: center; margin-bottom: 20px;">เรื่องราวของเรา</h2>
+                <h2 style="font-size: 26px; font-weight: 800; text-align: center; margin-bottom: 20px;">เรื่องราวของเรา
+                </h2>
 
                 <div class="about-intro-grid">
                     <!-- Group of bottles or nice display image -->
@@ -160,7 +159,8 @@
             <div class="scent-identities">
                 <h2 style="font-size: 24px; font-weight: 800; text-align: center; margin-bottom: 5px;">
                     เอกลักษณ์ของกลิ่น</h2>
-                <p style="text-align: center; font-size: 13px; color: var(--text-muted); margin-bottom: 20px;">💡 คลิกที่การ์ดเอกลักษณ์กลิ่นด้านล่างเพื่ออ่านรายละเอียดและเรื่องราวของกลิ่นนั้นๆ</p>
+                <p style="text-align: center; font-size: 13px; color: var(--text-muted); margin-bottom: 20px;">💡
+                    คลิกที่การ์ดเอกลักษณ์กลิ่นด้านล่างเพื่ออ่านรายละเอียดและเรื่องราวของกลิ่นนั้นๆ</p>
 
                 <div class="scent-grid">
                     <!-- Oakmoss -->
@@ -232,33 +232,44 @@
                 <span>🔒 ชำระเงินปลอดภัย</span>
             </div>
         </footer>
-    <!-- Scent Detail Reader Modal Box -->
-    <div class="product-modal-overlay" id="scentReaderOverlay" aria-hidden="true">
-        <div class="product-modal" style="max-width: 580px; border-radius: 24px;">
-            <button class="product-modal-close" id="scentReaderCloseBtn" aria-label="ปิดหน้าต่าง">✕</button>
-            <div class="product-modal-content" style="grid-template-columns: 180px 1fr; gap: 20px; padding: 25px;">
-                <div class="product-modal-image-wrapper" style="background: #fdf4ff;">
-                    <img src="" id="scentReaderImg" alt="เอกลักษณ์ของกลิ่น" class="product-modal-img" style="border-radius: 12px; max-height: 160px; object-fit: cover;">
-                </div>
-                <div class="product-modal-details">
-                    <span class="modal-gender-tag" id="scentReaderTag" style="background: #f3e8ff; color: #9333ea; font-size: 11px;">🌿 เอกลักษณ์ของกลิ่น</span>
-                    <h3 id="scentReaderTitle" class="modal-title" style="font-size: 20px; margin-top: 4px; margin-bottom: 8px;">ชื่อกลิ่น</h3>
-                    <p id="scentReaderDesc" class="modal-desc" style="font-size: 13px; line-height: 1.5; color: #4a3560; margin-bottom: 12px;">คำบรรยายกลิ่น...</p>
-                    
-                    <div class="modal-info-group" style="margin-bottom: 10px;">
-                        <p id="scentReaderTone" style="font-size: 12px; font-weight: 600; color: #7e22ce; background: #faf5ff; padding: 6px 10px; border-radius: 8px; margin-bottom: 6px;">✨ โทนกลิ่น: </p>
-                        <p id="scentReaderFeeling" style="font-size: 12px; font-weight: 600; color: #2b8a3e; background: #f0fdf4; padding: 6px 10px; border-radius: 8px;">🌿 ให้ความรู้สึก: </p>
+        <!-- Scent Detail Reader Modal Box -->
+        <div class="product-modal-overlay" id="scentReaderOverlay" aria-hidden="true">
+            <div class="product-modal" style="max-width: 580px; border-radius: 24px;">
+                <button class="product-modal-close" id="scentReaderCloseBtn" aria-label="ปิดหน้าต่าง">✕</button>
+                <div class="product-modal-content" style="grid-template-columns: 180px 1fr; gap: 20px; padding: 25px;">
+                    <div class="product-modal-image-wrapper" style="background: #fdf4ff;">
+                        <img src="" id="scentReaderImg" alt="เอกลักษณ์ของกลิ่น" class="product-modal-img"
+                            style="border-radius: 12px; max-height: 160px; object-fit: cover;">
                     </div>
+                    <div class="product-modal-details">
+                        <span class="modal-gender-tag" id="scentReaderTag"
+                            style="background: #f3e8ff; color: #9333ea; font-size: 11px;">🌿 เอกลักษณ์ของกลิ่น</span>
+                        <h3 id="scentReaderTitle" class="modal-title"
+                            style="font-size: 20px; margin-top: 4px; margin-bottom: 8px;">ชื่อกลิ่น</h3>
+                        <p id="scentReaderDesc" class="modal-desc"
+                            style="font-size: 13px; line-height: 1.5; color: #4a3560; margin-bottom: 12px;">
+                            คำบรรยายกลิ่น...</p>
 
-                    <div style="font-size: 11px; font-weight: 700; color: #6b21a8; background: #f3e8ff; padding: 8px 12px; border-radius: 10px; text-align: center; margin-top: 5px;">
-                        🛍️ พบในน้ำหอม: <span id="scentReaderPerfumes" style="font-weight: 600; color: #1a1a1a;">-</span>
+                        <div class="modal-info-group" style="margin-bottom: 10px;">
+                            <p id="scentReaderTone"
+                                style="font-size: 12px; font-weight: 600; color: #7e22ce; background: #faf5ff; padding: 6px 10px; border-radius: 8px; margin-bottom: 6px;">
+                                ✨ โทนกลิ่น: </p>
+                            <p id="scentReaderFeeling"
+                                style="font-size: 12px; font-weight: 600; color: #2b8a3e; background: #f0fdf4; padding: 6px 10px; border-radius: 8px;">
+                                🌿 ให้ความรู้สึก: </p>
+                        </div>
+
+                        <div
+                            style="font-size: 11px; font-weight: 700; color: #6b21a8; background: #f3e8ff; padding: 8px 12px; border-radius: 10px; text-align: center; margin-top: 5px;">
+                            🛍️ พบในน้ำหอม: <span id="scentReaderPerfumes"
+                                style="font-weight: 600; color: #1a1a1a;">-</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="app.js"></script>
+        <script src="app.js"></script>
 </body>
 
 </html>

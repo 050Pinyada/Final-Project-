@@ -1,52 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ========================================================
-    // 0. Global Authentication Guard & Login Gatekeeper
-    // ========================================================
-    const rawPath = window.location.pathname;
-    let currentPage = rawPath.substring(rawPath.lastIndexOf('/') + 1).toLowerCase();
-    if (!currentPage || currentPage === "") currentPage = "index.html";
 
-    const isLoggedIn = sessionStorage.getItem("isLoggedIn") === "true";
-    const isLoginPage = currentPage === "login.html";
-
-    // 1. หากยังไม่ได้เข้าสู่ระบบ และพยายามเข้าหน้าอื่นที่ไม่ใช่ login.html -> บังคับเด้งกลับไป login.html
-    if (!isLoggedIn && !isLoginPage) {
-        window.location.href = "login.html";
-        return;
-    }
-
-    // 2. หากเข้าสู่ระบบแล้ว และอยู่ในหน้าภายใน -> เปลี่ยนเมนู "เข้าสู่ระบบ" เป็น "ออกจากระบบ"
-    if (isLoggedIn) {
-        document.querySelectorAll("nav a[href='login.html'], .mobile-nav-panel a[href='login.html']").forEach(link => {
-            link.textContent = "🚪 ออกจากระบบ";
-            link.style.backgroundColor = "#ef4444";
-            link.style.color = "#ffffff";
-            link.style.borderRadius = "20px";
-            link.style.padding = "6px 14px";
-            link.href = "#";
-            link.addEventListener("click", (e) => {
-                e.preventDefault();
-                if (confirm("คุณต้องการออกจากระบบใช่หรือไม่?")) {
-                    sessionStorage.removeItem("isLoggedIn");
-                    window.location.href = "login.html";
-                }
-            });
-        });
-    }
-
-    // 3. หากอยู่ในหน้า login.html และยังไม่ได้เข้าสู่ระบบ -> ล็อกลิงก์เมนูไม่ให้กดข้ามไปหน้าอื่นได้ก่อนล็อกอิน
-    if (isLoginPage && !isLoggedIn) {
-        const navLinks = document.querySelectorAll("header nav a:not([href='login.html']), .mobile-nav-panel a:not([href='login.html'])");
-        navLinks.forEach(link => {
-            link.addEventListener("click", (e) => {
-                e.preventDefault();
-                alert("🔒 กรุณากรอกข้อมูลเข้าสู่ระบบก่อนเข้าดูรายการเนื้อหาด้านในครับ");
-            });
-        });
-    }
-
-    // ========================================================
     // 1. Quantity Selector (details.html)
     // ========================================================
     const qtyMinus = document.querySelector(".qty-minus");
@@ -470,7 +424,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 7. Dynamic Details Page Controller (details.html?id=X)
     // ========================================================
     const detailTitleEl = document.getElementById("detailTitle");
-    
+
     if (detailTitleEl) {
         // Read 'id' from URL query string (e.g. details.html?id=2)
         const urlParams = new URLSearchParams(window.location.search);

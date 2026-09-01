@@ -1200,6 +1200,7 @@ main {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1220,8 +1221,15 @@ main {
 }
 
 @keyframes loginLogoFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
 }
 
 .login-title {
@@ -1384,8 +1392,13 @@ main {
 }
 
 @keyframes loginLeafSway {
-    0% { transform: rotate(-5deg); }
-    100% { transform: rotate(5deg); }
+    0% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(5deg);
+    }
 }
 
 .login-ornament-line {
@@ -1971,7 +1984,7 @@ main {
 }
 
 /* Active Checkbox Label Style */
-.filter-option input[type="checkbox"]:checked + span,
+.filter-option input[type="checkbox"]:checked+span,
 .filter-option input[type="checkbox"]:checked {
     accent-color: #9333ea;
 }
